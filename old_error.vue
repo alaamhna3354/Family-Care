@@ -1,0 +1,85 @@
+<template>
+    <section id="wrapper" class="error-page">
+        <div class="error-box">
+            <div class="error-body text-center">
+                <h1>500</h1>
+                <h3 class="text-uppercase">Server Error</h3>
+                <p class="text-muted m-t-30 m-b-30">Please Try Again Later</p>
+                <NuxtLink to="/" class="btn btn-info btn-rounded waves-effect waves-light m-b-40">
+                    Back To Home
+                </NuxtLink>  
+            </div>
+            <footer class="footer text-center">Copyright @ {{ new Date().getFullYear() }} Luxmetallic LLC</footer>
+        </div>
+    </section>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
+.error-box {
+    height: 100%;
+    position: fixed;
+    background: url(/images/error-bg.jpg) center center no-repeat #fff !important;
+    width: 100%
+}
+
+.error-box .error-body h3 {
+    font-size: 21px;
+}
+
+.m-t-30 {
+    margin-top: 30px !important;
+}
+
+.m-b-30 {
+    margin-bottom: 30px !important;
+}
+
+.m-b-40 {
+    margin-bottom: 40px !important;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-rounded {
+    border-radius: 60px;
+}
+
+.error-box .footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #58666e;
+    left: 0;
+    padding: 20px 30px;
+    position: absolute;
+    right: 0;
+    background: #fff;
+}
+
+.error-body {
+    padding-top: 5%
+}
+
+.error-body h1 {
+    font-size: 210px;
+    font-weight: 900;
+    line-height: 210px
+}
+
+</style>

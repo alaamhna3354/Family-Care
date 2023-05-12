@@ -1,0 +1,208 @@
+@import '@/assets/styles/scss/theme/variables';
+@import '@/assets/styles/scss/theme/mixin';
+
+/* 
+  Global Classes
+  --------------------------------------------
+*/
+@font-face { font-family: khalaadSara; src: url('../font/khalaad-Sara.ttf'); }
+// Poppins Fonts
+@font-face { font-family: PoppinsBlack; src: url('../font/Poppins-Black.ttf'); }
+@font-face { font-family: PoppinsBlackItalic; src: url('../font/Poppins-BlackItalic.ttf'); }
+@font-face { font-family: PoppinsBold; src: url('../font/Poppins-Bold.ttf'); }
+@font-face { font-family: PoppinsBoldItalic; src: url('../font/Poppins-BoldItalic.ttf'); }
+@font-face { font-family: PoppinsExtraBold; src: url('../font/Poppins-ExtraBold.ttf'); }
+@font-face { font-family: PoppinsExtraBoldItalic; src: url('../font/Poppins-ExtraBoldItalic.ttf'); }
+@font-face { font-family: PoppinsExtraLight; src: url('../font/Poppins-ExtraLight.ttf'); }
+@font-face { font-family: PoppinsExtraLightItalic; src: url('../font/Poppins-ExtraLightItalic.ttf'); }
+@font-face { font-family: PoppinsItalic; src: url('../font/Poppins-Italic.ttf'); }
+@font-face { font-family: PoppinsLight; src: url('../font/Poppins-Light.ttf'); }
+@font-face { font-family: PoppinsLightItalic; src: url('../font/Poppins-LightItalic.ttf'); }
+@font-face { font-family: PoppinsMedium; src: url('../font/Poppins-Medium.ttf'); }
+@font-face { font-family: PoppinsMediumItalic; src: url('../font/Poppins-MediumItalic.ttf'); }
+@font-face { font-family: PoppinsSemiBold; src: url('../font/Poppins-SemiBold.ttf'); }
+@font-face { font-family: PoppinsSemiBoldItalic; src: url('../font/Poppins-SemiBoldItalic.ttf'); }
+@font-face { font-family: PoppinsThin; src: url('../font/Poppins-Thin.ttf'); }
+@font-face { font-family: PoppinsThinItalic; src: url('../font/Poppins-ThinItalic.ttf'); }
+@font-face { font-family: PoppinsRegular; src: url('../font/Poppins-Regular.ttf'); }
+// Philosopher Fonts
+@font-face { font-family: Philosopher; src: url('../font/Philosopher.otf'); }
+@font-face { font-family: PhilosopherBold; src: url('../font/Philosopher-Bold.ttf'); }
+@font-face { font-family: PhilosopherBoldItalic; src: url('../font/Philosopher-BoldItalic.ttf'); }
+@font-face { font-family: PhilosopherItalic; src: url('../font/Philosopher-Italic.ttf'); }
+@font-face { font-family: PhilosopherRegular; src: url('../font/Philosopher-Regular.ttf'); }
+
+body {
+  font-family: PoppinsRegular;
+  // &::-webkit-scrollbar { width: 8px; }
+  // &::-webkit-scrollbar-track { background: #f1f1f1; }
+  // &::-webkit-scrollbar-thumb { background: $gold; border-radius: 10px; }
+  // &::-webkit-scrollbar-thumb:hover { background: #555; }
+  @include vertical-scrollbar(8px, '#f1f1f1', $blue, '#555');
+  *::selection { color: #fff; background: $blue; }
+	/* For Mozilla Firefox */
+	*::-moz-selection { color: #fff; background: $blue; }
+}
+
+a {
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.font-philosopher {
+  font-family: Philosopher !important; 
+}
+
+.bg-black { background: $black; }
+
+.bg-grey { background: $grey; }
+
+.bg-gold { background: $gold; }
+
+.bg-medium-gold { background: $medium-gold; }
+
+.bg-light-gold-v1 { background: $light-gold-v1; }
+
+.bg-light-gold-v2 { background: $light-gold-v2; }
+
+.bright-white { color: $text-color !important; } 
+
+.text-gold { color: $gold; }
+
+.text-medium-gold { color: $medium-gold; }
+
+.text-light-gold-v1 { color: $light-gold-v1; }
+
+.text-light-gold-v2 { color: $light-gold-v2; }
+
+.text-dark { color: $black; }
+
+.text-grey { color: $grey; }
+
+.border-gold { border-color: $gold !important; }
+
+.black-hover {
+  &:hover { color: $light-black; }
+}
+
+.gold-hover {
+  @include transition(all, .5s, ease);
+  &:hover { color: $gold; }
+}
+
+.white-hover {
+  @include transition(all, .5s, ease);
+  &:hover { color: $text-color; }
+}
+
+.responsive {
+  width: 100%;
+  height: 100%;
+}
+
+.header-image { width: 100%; height: 500px; }
+
+.btn-gradient {
+  padding-left: 30px;
+  padding-right: 30px;
+  @include linearGradient($light-gold-v2, $gold);
+  @include transition(all, .3s, ease);
+  border-radius: 0;
+  &:hover { filter: drop-shadow(2px 2px 6px #aaa); }
+  &:focus { box-shadow: none; }
+  &:visited { background: red; }
+}
+
+.swiper-scrollbar {
+  // display: none !important;
+ }
+
+ .main-black-background {
+  // background: url('/images/bg-about-us.webp') center center no-repeat;
+  // background-size: cover;
+  background-color: #8ad4dd;
+ }
+
+ .btn-medium-gold {
+    color: #fff;
+    background-color: $medium-gold;
+    border-color: $medium-gold;
+    &:hover {
+      color: #000;
+      background-color: $light-gold-v2;
+      border-color: $light-gold-v2;
+    }
+ }
+.btn-main{
+  background-color: $blue;
+  color: #fff;
+  padding: 8px 50px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  transition: $transition;
+  font-weight: bold;
+  border: 2px solid $blue;
+  &:hover{
+    background-color: #fff;
+    color: $blue2;
+  }
+}
+.btn-main2{
+  background-color: #fff;
+  color: $blue;
+  padding: 8px 50px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  transition: $transition;
+  font-weight: bold;
+  border: 2px solid $blue;
+  &:hover{
+    background-color: $blue;
+    color: #fff;
+  }
+}
+ .btn-custom {
+  background: linear-gradient(90deg, #fbe9b0 0%, $medium-gold 100%);
+  color: #212529;
+  border-radius: 0px;
+  line-height: 38px;
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding: 0 30px;
+  &:before {
+    position: absolute;
+    left: -145px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: #000;
+    opacity: 0;
+    transform: skew(40deg);
+    transition: all 0.3s ease 0s;
+    // left: 180px;
+    opacity: 0;
+  }
+  &:hover:before { left: 500px; opacity: 0.3; }
+  &.primary-btn {
+    display: block;
+    width: max-content;
+  }
+}
+
+.golden-gradient-background {
+  background: -webkit-linear-gradient(90deg, $gold 5%, $medium-gold 20%, $light-gold-v2 40%, $light-gold-v2 60%, $medium-gold 80%, $gold 95%);
+  background: -moz-linear-gradient(90deg, $gold 5%, $medium-gold 20%, $light-gold-v2 40%, $light-gold-v2 60%, $medium-gold 80%, $gold 95%);
+  background: -o-linear-gradient(90deg, $gold 5%, $medium-gold 20%, $light-gold-v2 40%, $light-gold-v2 60%, $medium-gold 80%, $gold 95%);
+  background: linear-gradient(90deg, $gold 5%, $medium-gold 20%, $light-gold-v2 40%, $light-gold-v2 60%, $medium-gold 80%, $gold 95%);
+}
+
